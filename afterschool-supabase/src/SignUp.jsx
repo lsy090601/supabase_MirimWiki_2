@@ -16,10 +16,13 @@ export default function SignUp() {
 
         const { data, error } = await signUp(email, password, name, birth)
         if (error) {
-            toast.error(error.message)
+            if (error.message === "Password should be at least 6 characters.") {
+                toast.error("비밀번호는 6자리 이상이어야 합니다.")
+            } else {
+                toast.error(error.message)
+            }
             return
         }
-
         toast.success('회원가입성공! 이메일을 확인하세요.')
         setBirth("")
         setEmail("")
