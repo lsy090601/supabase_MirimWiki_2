@@ -14,7 +14,7 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { data, error } = await signUp(email, password, name, birth);
+    const { error } = await signUp(email, password, name, birth);
     if (error) {
       if (error.message === "Password should be at least 6 characters.") {
         toast.error("비밀번호는 6자리 이상이어야 합니다.");
