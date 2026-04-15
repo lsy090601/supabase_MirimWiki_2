@@ -1,17 +1,14 @@
-import SignUp from "./SignUp";
-
+// import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 function App() {
-  
-
   return (
     <>
-    <div className="flex justify-center">
-      <SignUp/>
+      <div className="flex justify-center">
+        <SignIn />
       </div>
-     
     </>
-  )
+  );
 }
 
-export default App
+export default App;
